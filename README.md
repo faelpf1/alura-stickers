@@ -1,4 +1,4 @@
-# Classificação de filmes
+# Alura-Stickers
 
 Esse projeto é um desafio realizado durante a imersão java_ da Alura, onde foi implementada uma aplicação java que consome a [API IMDB](https://imdb-api.com/).
 
