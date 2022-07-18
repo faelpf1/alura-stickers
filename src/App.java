@@ -15,13 +15,16 @@ public class App {
                 endpoint.endPoint("https://api.mocki.io/v2/549a5d8b");
                 break;
             case 2:
-                endpoint.endPoint("https://imdb-api.com/en/API/MostPopularMovies/k_a83ddg3k");
+                //endpoint.endPoint("https://imdb-api.com/en/API/MostPopularMovies/k_a83ddg3k");
+                endpoint.endPoint("https://api.mocki.io/v2/549a5d8b/MostPopularMovies");
                 break;
             case 3:
-                endpoint.endPoint("https://imdb-api.com/en/API/Top250TVs/k_a83ddg3k");
+                //endpoint.endPoint("https://imdb-api.com/en/API/Top250TVs/k_a83ddg3k");
+                endpoint.endPoint("https://api.mocki.io/v2/549a5d8b/Top250TVs");
                 break;
             case 4:
-                endpoint.endPoint("https://imdb-api.com/en/API/MostPopularTVs/k_a83ddg3k");
+                //endpoint.endPoint("https://imdb-api.com/en/API/MostPopularTVs/k_a83ddg3k");
+                endpoint.endPoint("https://api.mocki.io/v2/549a5d8b/MostPopularTVs");
                 break;
             default:
                 System.out.println("Opção invalida!");
