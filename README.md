@@ -2,7 +2,7 @@
 
 Esse projeto é um desafio realizado durante a imersão java_ da Alura, onde foi implementada uma aplicação java que consome a [API IMDB](https://imdb-api.com/).
 
-![Demonstração](hhttps://github.com/faelpf1/alura-stickers/blob/master/Demo.png)
+![Demonstração](https://user-images.githubusercontent.com/51681402/179631399-72de8f22-171d-43f0-8a04-d6c7957f210a.png)
 
 ## Tecnologia utilizada
 1. **Java 17**
