@@ -8,38 +8,33 @@ public class App {
         /* URL */
 
         //String url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY";
-        /*String url = "https://raw.githubusercontent.com/alura-cursos/imersao-java/api/NASA-APOD.json";
+        String url = "https://raw.githubusercontent.com/alura-cursos/imersao-java/api/NASA-APOD.json)";
         var clienteHttp = new ClienteHttp();       
         String json = clienteHttp.buscaDados(url);
         var extratorDeConteudoDaNasa = new ExtratorDeConteudoDaNasa();
-        List<Conteudo> conteudos = extratorDeConteudoDaNasa.extraiConteudos(json);*/
+        List<Conteudo> conteudos = extratorDeConteudoDaNasa.extraiConteudos(json);
 
 
-        String url = "https://api.mocki.io/v2/549a5d8b";
+        /*String url = "https://api.mocki.io/v2/549a5d8b";
         var extratorDeConteudoDoIMDB = new ExtratorDeConteudoDoIMDB();
         var clienteHttp = new ClienteHttp();       
         String json = clienteHttp.buscaDados(url);
-        List<Conteudo> conteudos = extratorDeConteudoDoIMDB.extraiConteudos(json);
+        List<Conteudo> conteudos = extratorDeConteudoDoIMDB.extraiConteudos(json);*/
        
         /* Exibe os dados */
         var geradora = new GeradoraDeFigurinhas();
 
-        for (int i=0; i<3; i++){
+        conteudos.forEach(conteudo -> {
+            try {
+                InputStream inputStream = new URL(conteudo.urlImagem()).openStream(); //Transforma a imagem da URL em uma InputStream
+                String nomeArquivo = conteudo.titulo() + ".png"; //Nome da saída 
+                geradora.cria(inputStream, nomeArquivo);
+                System.out.println();
 
-            Conteudo conteudo = conteudos.get(i);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
 
-            InputStream inputStream = new URL(conteudo.urlImagem()).openStream(); //Transforma a imagem da URL em uma InputStream
-            String nomeArquivo = conteudo.titulo() + ".png"; //Nome da saída 
-
-            geradora.cria(inputStream, nomeArquivo);
-
-            System.out.println();
-
-        }
-
-        /*
-        for (Map<String, String> conteudo: listaDeConteudo){
-            geradora.cria(inputStream, nomeArquivo);
-        }*/
     }
 }

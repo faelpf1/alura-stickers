@@ -13,16 +13,12 @@ public class ExtratorDeConteudoDaNasa implements ExtratorDeConteudo {
         /* Preenche lista com os conteudos dos dados */
         List<Conteudo> conteudos = new ArrayList<>();
 
-        for (Map<String, String> atributos : listaDeAtributos) {
-
+        listaDeAtributos.forEach( atributos -> {
             String titulo = atributos.get("title");
             String urlImagem = atributos.get("url");
-
             var conteudo = new Conteudo(titulo, urlImagem);
-
             conteudos.add(conteudo);
-            
-        }
+        });
 
         return conteudos;
         
