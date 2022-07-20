@@ -2,16 +2,11 @@ package Aula02;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.awt.Color;
 import java.awt.Font;
 import javax.imageio.ImageIO;
 import java.awt.font.GlyphVector;
-import java.awt.BasicStroke;
 
 public class GeradoraDeFigurinhas {
 
@@ -59,14 +54,14 @@ public class GeradoraDeFigurinhas {
 
     }
 
-    public static void main(String[] args) throws Exception {
+    /*public static void main(String[] args) throws Exception {
         var geradora = new GeradoraDeFigurinhas();
         InputStream inputStream = new FileInputStream(new File("saida/entrada.jpg"));
-        //InputStream inputStream = new URL("https://imersao-java-apis.s3.amazonaws.com/TopMovies_2.jpg").openStream(); /* Transforma a imagem da URL em uma InputStream */
-        String nomeArquivo = "teste.png"; /* Nome da saída */
+        InputStream inputStream = new URL("https://imersao-java-apis.s3.amazonaws.com/TopMovies_2.jpg").openStream();
+        String nomeArquivo = "teste.png";
 
         geradora.cria(inputStream, nomeArquivo);
 
-    }
-    
+    }*/
+
 }
