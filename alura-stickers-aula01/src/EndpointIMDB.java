@@ -21,20 +21,34 @@ public class EndpointIMDB {
         /* Extrai os dados */
         JsonParser parser = new JsonParser();
         List<Map<String, String>> listaDeFilmes = parser.parse(body);
+ 
+        String corFundoCiano = "\u001b[46m";
+        String corFundoMagenta = "\u001b[45m";
+        String fonteNegrito = "\u001b[1m";
+        String fonteItalico = "\u001b[3m";
+        String codigoReset = "\u001b[m";
         
         /* Exibe os dados */
+
         for (Map<String, String> filme: listaDeFilmes){
 
-            System.out.println("\u001b[1m" + "Título: \u001b[m" + "\u001b[3m"+ filme.get("title") + "\u001b[m");
-            System.out.println("\u001b[1m" + "Poster: \u001b[m" + filme.get("image"));
+            System.out.println(corFundoCiano + fonteNegrito + "Título: " + codigoReset + corFundoCiano + fonteItalico + filme.get("title") + codigoReset);
+            System.out.println("Poster: "+ filme.get("image"));
             
             String rate = filme.get("imDbRating");
-            System.out.println("\u001b[45m" +  "Classificação: " + rate + "\u001b[m");
+            System.out.println(corFundoMagenta +  "Classificação: " + rate + codigoReset);
 
             String stars = "";
-            for (int i=0; i<Math.round(Float.parseFloat(rate)); i++){
-                stars += "\u2B50";
+            if(Float.parseFloat(rate) > 6){ //Classificacao acima de 6
+                for (int i=0; i<Math.round(Float.parseFloat(rate)); i++){
+                    stars += "\u2B50";
+                }
+            } else { // Classificacao abaixo de 6
+                for (int i=0; i<Math.round(Float.parseFloat(rate)); i++){
+                    stars += "\u2605";
+                }
             }
+            
             System.out.println(stars);
 
             System.out.println();
