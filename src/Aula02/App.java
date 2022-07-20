@@ -1,3 +1,4 @@
+package Aula02;
 import java.util.Scanner;
 
 public class App {
@@ -7,9 +8,9 @@ public class App {
         System.out.println("Digite uma das opções: ");
         Scanner opcao = new Scanner(System.in);
 
-        EndpointIMDB endpoint = new EndpointIMDB();
+        var endpoint = new EndpointIMDB();
 
-        String apikey = System.getenv( "API_KEY");
+        //String apikey = System.getenv("API_KEY");
 
         switch (opcao.nextInt()){
             case 1:
@@ -31,5 +32,8 @@ public class App {
             default:
                 System.out.println("Opção invalida!");
         }
+
+        opcao.close();
     }
+
 }
