@@ -28,8 +28,8 @@ public class App {
 
             Conteudo conteudo = conteudos.get(i);
 
-            InputStream inputStream = new URL(conteudo.getUrlImagem()).openStream(); //Transforma a imagem da URL em uma InputStream
-            String nomeArquivo = conteudo.getTitulo() + ".png"; //Nome da saída 
+            InputStream inputStream = new URL(conteudo.urlImagem()).openStream(); //Transforma a imagem da URL em uma InputStream
+            String nomeArquivo = conteudo.titulo() + ".png"; //Nome da saída 
 
             geradora.cria(inputStream, nomeArquivo);
 

@@ -8,7 +8,7 @@ Esse projeto é um desafio realizado durante a imersão java_ da Alura, onde foi
 
 ## Deafios a serem desenvolvidos
 
-- [ ] Transformar a classe que representa os conteúdos em um Record, disponível a partir do Java 16
+- [x] Transformar a classe que representa os conteúdos em um Record, disponível a partir do Java 16
 - [ ] Criar as suas próprias exceções e usá-las na classe que implementa o cliente HTTP
 - [ ] Usar recursos do Java 8 e posterior, como Streams e Lambdas, para mapear uma lista em uma outra
 - [ ] Criar uma Enum que une, como configurações, a URL da API e o extrator utilizado
