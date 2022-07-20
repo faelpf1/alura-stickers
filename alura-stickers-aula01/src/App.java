@@ -6,14 +6,14 @@ public class App {
         System.out.println("------------- MENU -------------\n");
         System.out.println("1-Top 250 Filmes \n2-Filmes mais populares \n3-Top 250 Séries \n4-Séries mais populares\n");
         System.out.println("Digite uma das opções: ");
-        Scanner opcao = new Scanner(System.in);
+        //Scanner opcao = new Scanner(System.in);
 
         EndpointIMDB endpoint = new EndpointIMDB();
 
         //String apikey = System.getenv("API_KEY"); //Chave da API IMDB na variável de ambiente
-        endpoint.endPoint("teste.json");
+        endpoint.endPoint("https://raw.githubusercontent.com/alexfelipe/imersao-java/json/top250.json");
         
-        switch (opcao.nextInt()){
+        /*switch (opcao.nextInt()){
             case 1:
                 System.out.println("------------- TOP 250 Filmes -------------\n");
                 //endpoint.endPoint("https://imdb-api.com/en/API/Top250Movies/" + apikey);
@@ -38,7 +38,7 @@ public class App {
                 System.out.println("Opção invalida!");
         }
 
-        opcao.close();
+        opcao.close();*/
     
     }
     
