@@ -7,7 +7,7 @@ Esse projeto é um desafio realizado durante a imersão java_ da Alura, onde foi
 2. **Spring Boot 3.0.0(M4) com as denpedências: Spring Web e Spring Data MongoDB** 
 3. **Mongo DB Atlas**
 
-# Observação
+## Observação
 Arquivo application.properties com as configurações de acesso ao MongoDB não se encontra nesse repositório e deverá ser adicionado.
 Local: src/resources
 Conteúdo: spring.data.mongodb.uri=mongodb+srv://<usuario>:<senha>@<host>/<nomeDoBanco>?retryWrites=true&w=majority
