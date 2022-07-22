@@ -12,6 +12,18 @@ public class Linguagem {
     private String image;
     private String ranking;
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public void setRanking(String ranking) {
+        this.ranking = ranking;
+    }
+
     public Linguagem(){
         
     }
