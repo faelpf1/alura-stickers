@@ -11,7 +11,7 @@ Testes do CRUD foram realiados com [Reqbin](https://reqbin.com/)
 ## Observação
 Arquivo application.properties com as configurações de acesso ao MongoDB não se encontra nesse repositório e deverá ser adicionado.
 Local: src/resources
-Conteúdo: spring.data.mongodb.uri=mongodb+srv://<usuario>:<senha>@<host>/<nomeDoBanco>?retryWrites=true&w=majority
+Conteúdo: spring.data.mongodb.uri=mongodb+srv://usuario:senha@host/nomeDoBanco?retryWrites=true&w=majority
 
 ## Deafios a serem desenvolvidos
 
